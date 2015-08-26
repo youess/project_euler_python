@@ -22,7 +22,7 @@ def is_prime(n):
     elif n == 2:
         return 1
     else:
-        for i in xrange(2, n):
+        for i in xrange(3, n, 2):
             if n % i == 0:
                 return 0
     return 1
