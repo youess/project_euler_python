@@ -33,7 +33,7 @@ def fac(n):
     >>> fac(4)
     24
     '''
-    return reduce(operator.mul, [i for i in xrange(1, n+1)])
+    return reduce(operator.mul, xrange(1, n+1))
 
 
 def get_the_permutation():
