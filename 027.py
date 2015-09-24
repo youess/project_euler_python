@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 '''
@@ -16,13 +16,11 @@ import doctest
 
 
 def is_prime(n):
-    k = n**0.5
+    k = int(n**0.5) + 1
     if n == 1:
         return 0
-    elif n == 2:
-        return 1
     else:
-        for i in xrange(3, n, 2):
+        for i in xrange(2, k):
             if n % i == 0:
                 return 0
     return 1
