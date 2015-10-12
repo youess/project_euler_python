@@ -13,6 +13,7 @@ Description: summation of primes
 import doctest
 
 
+"""
 def is_prime(n):
     '''
     >>> is_prime(5)
@@ -24,6 +25,32 @@ def is_prime(n):
         for i in range(2, int(n**0.5) + 1):
             if n % i == 0:
                 return False
+    return True
+"""
+
+
+def is_prime(n):
+
+    if n < 2:
+        return False
+    elif n < 4:
+        return True
+    elif n % 2 == 0:
+        return False
+    elif n < 9:
+        return True
+    elif n % 3 == 0:
+        return False
+    else:
+        k = int(n**0.5)
+        f = 5
+        while f <= k:
+            if n % f == 0:
+                return False
+            if n % (f + 2) == 0:
+                return False
+            f += 6
+
     return True
 
 
